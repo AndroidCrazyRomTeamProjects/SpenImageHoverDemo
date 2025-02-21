@@ -1,0 +1,47 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <!-- Small Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/berat"
+        android:background="@drawable/rounded_corners"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="center"/>
+
+    <!-- Full-Screen Overlay (Initially Hidden) -->
+    <FrameLayout
+        android:id="@+id/fullscreenOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:alpha="0"
+        android:visibility="gone">
+
+        <!-- White background with rounded corners -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/fullscreenImageView"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</FrameLayout>
